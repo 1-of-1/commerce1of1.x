@@ -1,0 +1,30 @@
+{
+  "hosting": {
+    "site": "of1-fff34",
+    "public": "./public",
+    "headers": [
+      {
+        "source": "**/*.@(js|html)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=0"
+          }
+        ]
+      }
+    ]
+  },
+  "functions": {
+    "source": "functions"
+  },
+  "firestore": {
+    "rules": "firebase/firestore/firestore.rules",
+    "indexes": "firebase/firestore/firestore.indexes.json"
+  },
+  "storage": {
+    "rules": "firebase/storage/storage.rules"
+  },
+  "remoteconfig": {
+    "template": "firebase/remoteconfig/remoteconfig.template.json"
+  }
+}

@@ -1,0 +1,12 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /transactions/{transactionID} {
+      allow read, update: if request.auth != null
+                  && request.resource.data.name == request.auth.token.name
+                  && request.resource.data.text is string;
+      allow delete: if false;
+    }
+  }
+}
