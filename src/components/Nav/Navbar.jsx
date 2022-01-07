@@ -17,7 +17,6 @@ const Navbar = ({ totalItems }) => {
         <Toolbar>
           <Typography component={Link} to="/" varient="h6" className={classes.title} color="primary">
               <img src={logo} alt="1of1" height="25px" className={classes.image} />
-              1of1
           </Typography>
           <div className={classes.grow} />
           {location.pathname === '/' &&(
